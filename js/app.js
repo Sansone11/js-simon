@@ -20,20 +20,27 @@ console.log('JS ok');
 
 
 // crea una array che contenga i 5 numeri casuali da 1 a 100
-let numberRandom =[]; 
 
 // crea un generatore di numeri casuali da 1 a 100
 //  let num = 1 + Math.floor(100 * Math.random());
 //     console.log(num)
 // crea un ciclo che compia 5 iterazioni  
-   function generateRandom (){
-    for (let i = 0; i < 100; i++){
-        let num = 1 + Math.floor(100 * Math.random());
-// pusha i valori dentro l'array
-        numberRandom.push(num[i]);
+const numbers = generateRandom ('');
+function generateRandom() {
+    const numberRandom = [];
+    let num = Math.floor(Math.random() * 100 + 1);
+    console.log(num);
+    while (numberRandom.length < 5) {
+        if (!numberRandom.includes(num)) {
+            numberRandom.push(num)
+        }
     }
-   }
+    console.log(generateRandom);
+    return generateRandom;
+}
+
+
  // crea un alert che mostri i 5 numeri contenuti nell array
- alert(numberRandom); 
-    // console.log(numberRandom [i]);
+alert('memorizza questi numeri:' + num.join(','));
+
 // chiuso l'alert parte il timer di 30 secondi
