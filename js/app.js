@@ -30,10 +30,10 @@ let numberRandom =[];
     for (let i = 0; i < 100; i++){
         let num = 1 + Math.floor(100 * Math.random());
 // pusha i valori dentro l'array
-        numberRandom.push(i);
+        numberRandom.push(num[i]);
     }
    }
  // crea un alert che mostri i 5 numeri contenuti nell array
- alert(num); 
+ alert(numberRandom); 
     // console.log(numberRandom [i]);
 // chiuso l'alert parte il timer di 30 secondi
