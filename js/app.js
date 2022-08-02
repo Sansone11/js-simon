@@ -25,22 +25,33 @@ console.log('JS ok');
 //  let num = 1 + Math.floor(100 * Math.random());
 //     console.log(num)
 // crea un ciclo che compia 5 iterazioni  
-const numbers = generateRandom ('');
+const numbers = generateRandom();
 function generateRandom() {
     const numberRandom = [];
-    let num = Math.floor(Math.random() * 100 + 1);
-    console.log(num);
+   
+    // console.log(num);
     while (numberRandom.length < 5) {
+        let num = Math.floor(Math.random() * 100 + 1);
         if (!numberRandom.includes(num)) {
             numberRandom.push(num)
         }
     }
     console.log(generateRandom);
-    return generateRandom;
+    return numberRandom;
 }
 
 
  // crea un alert che mostri i 5 numeri contenuti nell array
-alert('memorizza questi numeri:' + num.join(','));
+alert('memorizza questi numeri:' + numbers.join(','));
 
 // chiuso l'alert parte il timer di 30 secondi
+ setTimeout(()=>{
+    // crea un prompt che richieda all'utente i numeri che ha visto precedentemente
+   
+    for(let i = 0; i < 5; i++){
+        let userNumber = prompt('inserisci i numeri che hai memorizzato');
+   }
+    
+    // console log(userNumber);
+ },30000)
+ // se un numero inserito è uguale al un numero contenuto nell'array attribuisci un punto
