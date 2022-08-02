@@ -19,20 +19,18 @@ console.log('JS ok');
 // crea un alert che dica all'utente quanti punti ha totalizzato
 
 
-// crea una array che contenga i 5 numeri casuali da 1 a 100
-
-// crea un generatore di numeri casuali da 1 a 100
-//  let num = 1 + Math.floor(100 * Math.random());
-//     console.log(num)
-// crea un ciclo che compia 5 iterazioni  
+// crea una array che contenga i 5 numeri casuali da 1 a 100 
 const numbers = generateRandom();
 function generateRandom() {
     const numberRandom = [];
-   
+
     // console.log(num);
+    // crea un ciclo che compia 5 iterazioni 
     while (numberRandom.length < 5) {
+        // crea un generatore di numeri casuali da 1 a 100
         let num = Math.floor(Math.random() * 100 + 1);
         if (!numberRandom.includes(num)) {
+            // pusha i valori dentro l'array
             numberRandom.push(num)
         }
     }
@@ -41,17 +39,22 @@ function generateRandom() {
 }
 
 
- // crea un alert che mostri i 5 numeri contenuti nell array
+// crea un alert che mostri i 5 numeri contenuti nell array
 alert('memorizza questi numeri:' + numbers.join(','));
 
 // chiuso l'alert parte il timer di 30 secondi
- setTimeout(()=>{
+setTimeout(() => {
+    let point = 0;
     // crea un prompt che richieda all'utente i numeri che ha visto precedentemente
-   
-    for(let i = 0; i < 5; i++){
-        let userNumber = prompt('inserisci i numeri che hai memorizzato');
-   }
-    
-    // console log(userNumber);
- },30000)
+    const userNumber = [];
+    // crea un ciclo che confronti i n utente con gli n presenti nella stringa
+    for (let i = 0; i < 5; i++) {
+            userNumber = parseInt(prompt('inserisci i numeri che hai memorizzato'));
+            // se un numero inserito è uguale al un numero contenuto nell'array attribuisci un punto
+        if (numberRandom.includes(userNumber)) {
+            point++;
+            console.log(point);
+        }
+    }
+}, 30000);
  // se un numero inserito è uguale al un numero contenuto nell'array attribuisci un punto
