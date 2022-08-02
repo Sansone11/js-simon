@@ -46,15 +46,18 @@ alert('memorizza questi numeri:' + numbers.join(','));
 setTimeout(() => {
     let point = 0;
     // crea un prompt che richieda all'utente i numeri che ha visto precedentemente
-    const userNumber = [];
+    let userNumber;
     // crea un ciclo che confronti i n utente con gli n presenti nella stringa
     for (let i = 0; i < 5; i++) {
             userNumber = parseInt(prompt('inserisci i numeri che hai memorizzato'));
             // se un numero inserito è uguale al un numero contenuto nell'array attribuisci un punto
-        if (numberRandom.includes(userNumber)) {
+        if (numbers.includes(userNumber)) {
             point++;
             console.log(point);
         }
+       
     }
+    alert('totale punti...'+ point)
 }, 30000);
  // se un numero inserito è uguale al un numero contenuto nell'array attribuisci un punto
+ 
